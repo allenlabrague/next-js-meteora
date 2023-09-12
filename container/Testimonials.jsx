@@ -1,7 +1,11 @@
-import Earth from "@/components/Earth";
 import { thirdPlanet } from "@/constants";
 import DetailsList from "@/components/DetailsList";
-import React from "react";
+import dynamic from "next/dynamic";
+
+const Earth = dynamic(() => import("@/components/Earth"), {
+  ssr: false,
+  loading: () => <img src="/placeholder.png"></img>,
+});
 
 const Testimonials = () => {
   return (

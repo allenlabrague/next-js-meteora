@@ -1,6 +1,11 @@
-import Earth from "@/components/Earth";
 import { fourthPlanet } from "@/constants";
 import DetailsList from "@/components/DetailsList";
+import dynamic from "next/dynamic";
+
+const Earth = dynamic(() => import("@/components/Earth"), {
+  ssr: false,
+  loading: () => <img src="/placeholder.png"></img>,
+});
 
 const Footer = () => {
   return (
