@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 
 const Earth = dynamic(() => import("@/components/Earth"), {
   ssr: false,
-  loading: () => <img src="/placeholder.png"></img>,
+  loading: () => <img src="/pl.png"></img>,
 });
 
 const Header = () => {
